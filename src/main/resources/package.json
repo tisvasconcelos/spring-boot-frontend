@@ -1,0 +1,19 @@
+{
+  "name": "resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "node-sass  static/sass/ -r --include-path static/sass/ --output-style compressed --source-map true -o static/css/",
+    "watch:css": "nodemon -e scss --exec 'npm run build:css'",
+    "dev": "parallelshell 'npm run watch:css'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "4.5.3",
+    "nodemon": "1.11.0",
+    "parallelshell": "3.0.1"
+  }
+}
